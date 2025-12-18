@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Mystère du Secret Santa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Nunito:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Nunito", sans-serif;
+        background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+          linear-gradient(135deg, #1a472a 0%, #2c5f2d 100%);
+      }
+      h1,
+      h2,
+      .christmas-font {
+        font-family: "Mountains of Christmas", cursive;
+      }
+      .card-shadow {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      .snow-flake {
+        position: fixed;
+        top: -10px;
+        color: white;
+        opacity: 0.8;
+        animation: fall linear infinite;
+      }
+      @keyframes fall {
+        to {
+          transform: translateY(100vh);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen flex items-center justify-center p-4">
+    <!-- Container Principal (Feuille de papier/Carte) -->
+    <div
+      class="max-w-3xl w-full bg-[#fdfbf7] rounded-xl overflow-hidden card-shadow relative border-8 border-double border-red-800"
+    >
+      <!-- Décorations Coins -->
+      <div
+        class="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-yellow-600 rounded-tl-xl m-2"
+      ></div>
+      <div
+        class="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-yellow-600 rounded-tr-xl m-2"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-yellow-600 rounded-bl-xl m-2"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-yellow-600 rounded-br-xl m-2"
+      ></div>
+
+      <!-- En-tête -->
+      <header class="text-center pt-10 pb-6 px-4">
+        <div
+          class="inline-block bg-red-700 text-white px-6 py-2 rounded-full mb-4 shadow-md"
+        >
+          <span class="christmas-font text-2xl tracking-wide"
+            >🎄 Édition Spéciale Future Prof 🎄</span
+          >
+        </div>
+        <h1 class="text-5xl md:text-6xl text-green-900 font-bold mb-2">
+          Le Mystère du Secret Santa
+        </h1>
+        <p class="text-gray-600 italic text-lg">Une énigme en trois temps...</p>
+      </header>
+
+      <!-- Contenu Principal -->
+      <main class="px-8 pb-10 space-y-8">
+        <!-- Mon Premier -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-6 bg-red-50 p-6 rounded-lg border border-red-100 transform hover:scale-[1.01] transition-transform duration-300"
+        >
+          <div class="flex-shrink-0 bg-red-200 p-4 rounded-full">
+            <i data-lucide="footprints" class="w-10 h-10 text-red-800"></i>
+          </div>
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl text-red-800 mb-2">Mon premier...</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Est un allié fidèle. Discret, mais indispensable. Il accompagne
+              chaque échauffement et protège ce que tout futur prof de sport
+              doit chérir :
+              <span class="font-bold text-red-900">des pieds vaillants</span>,
+              prêts à affronter terrains et gymnases.
+            </p>
+            <p class="mt-2 text-sm text-red-600 font-bold italic">
+              Sans lui, la quête devient vite inconfortable. 🧦
+            </p>
+          </div>
+        </div>
+
+        <!-- Mon Deuxième -->
+        <div
+          class="flex flex-col md:flex-row-reverse items-center gap-6 bg-indigo-50 p-6 rounded-lg border border-indigo-100 transform hover:scale-[1.01] transition-transform duration-300"
+        >
+          <div class="flex-shrink-0 bg-indigo-200 p-4 rounded-full">
+            <i data-lucide="sparkles" class="w-10 h-10 text-indigo-800"></i>
+          </div>
+          <div class="text-center md:text-right">
+            <h2 class="text-3xl text-indigo-800 mb-2">Mon deuxième...</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Observe les astres pour mieux comprendre les humains. Pourquoi
+              certains adorent courir ? Et surtout… pourquoi tu étais destinée à
+              devenir prof de sport. Il révèle que ce n’est peut-être pas un
+              hasard, mais une affaire de planètes bien alignées.
+            </p>
+            <p class="mt-2 text-sm text-indigo-600 font-bold italic">
+              Le destin est écrit dans les étoiles. ✨📖
+            </p>
+          </div>
+        </div>
+
+        <!-- Mon Troisième -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-6 bg-yellow-50 p-6 rounded-lg border border-yellow-100 transform hover:scale-[1.01] transition-transform duration-300"
+        >
+          <div class="flex-shrink-0 bg-yellow-200 p-4 rounded-full">
+            <i data-lucide="wind" class="w-10 h-10 text-yellow-800"></i>
+          </div>
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl text-yellow-800 mb-2">Mon troisième...</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Est une relique. Un volant de badminton un peu usagé, mais adapté
+              à ton style légendaire. La légende raconte que
+              <span class="font-bold text-yellow-900"
+                >tu ne le smash jamais vraiment... Tu le brosses.</span
+              >
+            </p>
+            <p class="mt-2 text-sm text-yellow-600 font-bold italic">
+              Il paraît même qu'une vidéo existe... 🎥🏸
+            </p>
+            <button
+              onclick="openVideo()"
+              class="mt-3 inline-flex items-center gap-2 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-bold py-2 px-4 rounded-full transition-colors shadow-sm cursor-pointer mx-auto md:mx-0"
+            >
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              Voir la preuve
+            </button>
+            <p
+              id="dobbyText"
+              class="mt-2 text-sm text-yellow-600 font-bold italic hidden"
+            >
+              Oui c'est Dobby dans Harry Potter...
+            </p>
+          </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="text-center pt-8 border-t-2 border-dashed border-gray-300">
+          <div class="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+            ⚡ L'ÉQUIPEMENT ULTIME S'ASSEMBLE ⚡
+          </div>
+          <div
+            class="flex flex-wrap justify-center gap-4 text-sm md:text-base text-gray-600 mb-6"
+          >
+            <span
+              class="bg-gray-100 px-3 py-1 rounded-full border border-gray-200"
+              >Confort du terrain</span
+            >
+            <span
+              class="bg-gray-100 px-3 py-1 rounded-full border border-gray-200"
+              >Sagesse des étoiles</span
+            >
+            <span
+              class="bg-gray-100 px-3 py-1 rounded-full border border-gray-200"
+              >Autodérision d'un volant</span
+            >
+          </div>
+
+          <div
+            class="bg-green-800 text-white p-6 rounded-xl shadow-lg transform rotate-1 hover:rotate-0 transition-transform duration-300"
+          >
+            <h3 class="christmas-font text-4xl mb-2">
+              Bienvenue dans la Communauté du Secret Santa !
+            </h3>
+            <p class="text-green-100 text-lg font-light">
+              Et surtout... arrête de brosser, SMASH 😄
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-red-800 text-center py-2">
+        <p class="text-red-200 text-xs">Big Love à vous tous !</p>
+      </footer>
+    </div>
+    <!-- Modale Vidéo -->
+    <div
+      id="videoModal"
+      onclick="closeVideo()"
+      class="fixed inset-0 bg-black/70 flex items-center justify-center hidden z-50"
+    >
+      <div
+        class="bg-black rounded-lg overflow-hidden max-w-3xl w-full relative"
+        onclick="event.stopPropagation()"
+      >
+        <button
+          onclick="closeVideo()"
+          class="absolute top-2 right-2 text-white text-2xl z-10"
+        >
+          &times;
+        </button>
+        <video controls autoplay class="w-full h-auto">
+          <source src="video/badminton.mp4" type="video/mp4" />
+          Ton navigateur ne supporte pas la vidéo.
+        </video>
+      </div>
+    </div>
+
+    <script>
+      lucide.createIcons();
+
+      function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snow-flake");
+        snowflake.innerHTML = "❄";
+        snowflake.style.left = Math.random() * 100 + "vw";
+        snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+        document.body.appendChild(snowflake);
+        setTimeout(() => snowflake.remove(), 5000);
+      }
+      setInterval(createSnowflake, 200);
+
+      function openVideo() {
+        document.getElementById("videoModal").classList.remove("hidden");
+
+        // Affiche le texte après ouverture de la vidéo
+        document.getElementById("dobbyText").classList.remove("hidden");
+      }
+
+      function closeVideo() {
+        const modal = document.getElementById("videoModal");
+        const video = modal.querySelector("video");
+        video.pause();
+        video.currentTime = 0;
+        modal.classList.add("hidden");
+      }
+
+      // Fermeture avec ESC
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeVideo();
+        }
+      });
+    </script>
+  </body>
+</html>
